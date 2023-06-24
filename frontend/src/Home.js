@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import react, { Component } from 'react';
 import './App.css';
-import AppNavbar from './AppNavbar';
+import AppNavBar from './AppNavBar';
 import { Link } from 'react-router-dom';
 import { Button, Container } from 'reactstrap';
 
@@ -8,7 +8,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <AppNavbar/>
+                <AppNavBar/>
                 <Container fluid>
                     <Button color="link"><Link to="/students">Students</Link></Button>
                 </Container>

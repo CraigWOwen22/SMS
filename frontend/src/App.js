@@ -1,35 +1,22 @@
-import logo from './logo.svg';
+import react, { Component } from 'react';
 import './App.css';
-import React, { Component } from "react";
+import Home from './Home';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import StudentList from './StudentList';
+import StudentEdit from "./StudentEdit";
 
 class App extends Component {
-  state = {
-    students: []
-  };
-
-  async componentDidMount() {
-    const response = await fetch('/students');
-    const body = await response.json();
-    this.setState({students: body});
-  }
-
   render() {
-    const {students} = this.state;
     return (
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <div className="App-intro">
-              <h2>Students</h2>
-              {students.map(student =>
-                  <div key={student.id}>
-                    {student.name} ({student.email})
-                  </div>
-              )}
-            </div>
-          </header>
-        </div>
-    );
+        <Router>
+          <Switch>
+            <Route path='/' exact={true} component={Home}/>
+            <Route path='/students' exact={true} component={StudentList}/>
+            <Route path='/students/:id' component={StudentEdit}/>
+          </Switch>
+        </Router>
+    )
   }
 }
+
 export default App;

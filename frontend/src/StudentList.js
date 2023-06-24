@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, ButtonGroup, Container, Table } from 'reactstrap';
-import AppNavbar from './AppNavbar';
+import AppNavBar from './AppNavBar';
 import { Link } from 'react-router-dom';
 
 class StudentList extends Component {
@@ -48,7 +48,7 @@ class StudentList extends Component {
 
         return (
             <div>
-                <AppNavbar/>
+                <AppNavBar/>
                 <Container fluid>
                     <div className="float-right">
                         <Button color="success" tag={Link} to="/students/new">Add student</Button>
@@ -72,4 +72,4 @@ class StudentList extends Component {
     }
 }
 
-export default studentList;
+export default StudentList;

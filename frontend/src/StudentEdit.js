@@ -1,8 +1,8 @@
 
-import React, { Component } from 'react';
+import react, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { Button, Container, Form, FormGroup, Input, Label } from 'reactstrap';
-import AppNavbar from './AppNavbar';
+import AppNavBar from './AppNavBar';
 
 class StudentEdit extends Component {
 
@@ -56,7 +56,7 @@ async handleSubmit(event) {
         const title = <h2>{item.id ? 'Edit student' : 'Add student'}</h2>;
 
         return <div>
-            <AppNavbar/>
+            <AppNavBar/>
             <Container>
                 {title}
                 <Form onSubmit={this.handleSubmit}>
@@ -80,4 +80,4 @@ async handleSubmit(event) {
     }
 }
 
-export default withRouter(studentEdit);
+export default withRouter(StudentEdit);
