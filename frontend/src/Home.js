@@ -6,6 +6,7 @@ import { Button, Container } from 'reactstrap';
 
 class Home extends Component {
     render() {
+
         return (
             <div>
                 <AppNavBar/>
