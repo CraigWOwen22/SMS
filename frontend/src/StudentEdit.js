@@ -7,7 +7,7 @@ import AppNavBar from './AppNavBar';
 class StudentEdit extends Component {
 
     emptyItem = {
-        name: '',
+        firstName: '',
         email: ''
     };
 
@@ -30,9 +30,9 @@ class StudentEdit extends Component {
     handleChange(event) {
         const target = event.target;
         const value = target.value;
-        const name = target.name;
+        const firstName = target.name;
         let item = {...this.state.item};
-        item[name] = value;
+        item[firstName] = value;
         this.setState({item});
     }
 
@@ -61,8 +61,8 @@ async handleSubmit(event) {
                 {title}
                 <Form onSubmit={this.handleSubmit}>
                     <FormGroup>
-                        <Label for="name">Name</Label>
-                        <Input type="text" name="name" id="name" value={item.name || ''}
+                        <Label for="name">FirstName</Label>
+                        <Input type="text" name="firstName" id="firstName" value={item.firstName || ''}
                                onChange={this.handleChange} autoComplete="name"/>
                     </FormGroup>
                     <FormGroup>

@@ -2,13 +2,7 @@ package com.portfolio.sms.model;
 
 
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-
 import jakarta.persistence.*;
-import java.util.Set;
 
 //IgnoreThisComment
 @Entity
@@ -19,7 +13,7 @@ public class Student {
     @GeneratedValue
     private Long id;
 
-    private String name;
+    private String firstName;
     private String email;
 
 
@@ -31,12 +25,12 @@ public class Student {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String name) {
+        this.firstName = name;
     }
 
     public String getEmail() {

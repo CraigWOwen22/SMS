@@ -4,9 +4,6 @@ package com.portfolio.sms.web;
 import com.portfolio.sms.model.StudentRepository;
 import com.portfolio.sms.model.Student;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,8 +11,6 @@ import java.util.List;
 //import jakarta.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.Collection;
-import java.util.Optional;
 
 
 @RestController
@@ -47,7 +42,7 @@ public class StudentController {
     @PutMapping("/{id}")
     public ResponseEntity updateStudent(@PathVariable Long id, @RequestBody Student student) {
         Student currentStudent = studentRepository.findById(id).orElseThrow(RuntimeException::new);
-        currentStudent.setName(student.getName());
+        currentStudent.setFirstName(student.getFirstName());
         currentStudent.setEmail(student.getEmail());
         currentStudent = studentRepository.save(student);
 
