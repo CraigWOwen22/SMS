@@ -43,6 +43,7 @@ public class StudentController {
     public ResponseEntity updateStudent(@PathVariable Long id, @RequestBody Student student) {
         Student currentStudent = studentRepository.findById(id).orElseThrow(RuntimeException::new);
         currentStudent.setFirstName(student.getFirstName());
+        currentStudent.setSecondName(student.getSecondName());
         currentStudent.setEmail(student.getEmail());
         currentStudent = studentRepository.save(student);
 

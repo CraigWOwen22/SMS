@@ -36,6 +36,7 @@ class StudentList extends Component {
         const studentList = students.map(student => {
             return <tr key={student.id}>
                 <td style={{whiteSpace: 'nowrap'}}>{student.firstName}</td>
+                <td style={{whiteSpace: 'nowrap'}}>{student.firstName}</td>
                 <td>{student.email}</td>
                 <td>
                     <ButtonGroup>
@@ -58,8 +59,9 @@ class StudentList extends Component {
                         <thead>
                         <tr>
                             <th width="30%">FirstName</th>
+                            <th width="30%">SecondName</th>
                             <th width="30%">Email</th>
-                            <th width="40%">Actions</th>
+                            <th width="10%">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
