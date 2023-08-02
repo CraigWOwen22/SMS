@@ -30,9 +30,9 @@ class StudentEdit extends Component {
     handleChange(event) {
         const target = event.target;
         const value = target.value;
-        const firstName = target.name;
+        const fieldVal = target.name;
         let item = {...this.state.item};
-        item[firstName] = value;
+        item[fieldVal] = value;
         this.setState({item});
     }
 
@@ -68,6 +68,11 @@ async handleSubmit(event) {
                        <FormGroup>
                          <Label for="secondName">SecondName</Label>
                          <Input type="text" name="secondName" id="secondName" value={item.secondName || ''}
+                               onChange={this.handleChange} autoComplete="name"/>
+                    </FormGroup>
+                    <FormGroup>
+                         <Label for="dob">DOB</Label>
+                         <Input type="text" name="dob" id="dob" value={item.dob || ''}
                                onChange={this.handleChange} autoComplete="name"/>
                     </FormGroup>
                     <FormGroup>

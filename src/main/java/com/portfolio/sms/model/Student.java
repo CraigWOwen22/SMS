@@ -18,7 +18,10 @@ public class Student {
 
 
     private String secondName;
+
+    private String dob;
     private String email;
+
 
 
     public Long getId() {
@@ -40,6 +43,10 @@ public class Student {
     public String getSecondName() {return secondName;}
 
     public void setSecondName(String secondName) {this.secondName = secondName;}
+
+    public String getdob() {return dob;}
+
+    public void setdob(String dob) {this.dob = dob;}
 
     public String getEmail() {
         return email;

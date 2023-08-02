@@ -35,8 +35,10 @@ class StudentList extends Component {
 
         const studentList = students.map(student => {
             return <tr key={student.id}>
+                <td style={{whiteSpace: 'nowrap'}}>{student.id}</td>
                 <td style={{whiteSpace: 'nowrap'}}>{student.firstName}</td>
-                <td style={{whiteSpace: 'nowrap'}}>{student.firstName}</td>
+                <td style={{whiteSpace: 'nowrap'}}>{student.secondName}</td>
+                <td style={{whiteSpace: 'nowrap'}}>{student.dob}</td>
                 <td>{student.email}</td>
                 <td>
                     <ButtonGroup>
@@ -54,14 +56,16 @@ class StudentList extends Component {
                     <div className="float-right">
                         <Button color="success" tag={Link} to="/students/new">Add student</Button>
                     </div>
-                    <h3>students</h3>
+                    <h3>Students</h3>
                     <Table className="mt-4">
                         <thead>
                         <tr>
-                            <th width="30%">FirstName</th>
-                            <th width="30%">SecondName</th>
-                            <th width="30%">Email</th>
-                            <th width="10%">Actions</th>
+                            <th width="10%">ID</th>
+                            <th width="20%">FirstName</th>
+                            <th width="20%">SecondName</th>
+                            <th width="20%">DOB</th>
+                            <th width="20%">Email</th>
+                            <th width="20%">Actions</th>
                         </tr>
                         </thead>
                         <tbody>

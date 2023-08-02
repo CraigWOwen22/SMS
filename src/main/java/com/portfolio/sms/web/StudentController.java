@@ -44,6 +44,7 @@ public class StudentController {
         Student currentStudent = studentRepository.findById(id).orElseThrow(RuntimeException::new);
         currentStudent.setFirstName(student.getFirstName());
         currentStudent.setSecondName(student.getSecondName());
+        currentStudent.setdob(student.getdob());
         currentStudent.setEmail(student.getEmail());
         currentStudent = studentRepository.save(student);
 
